@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{2f25dd13-970c-4b6e-a5e1-91cb392efb5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes">
+      <UniqueIdentifier>{10218e7a-65bd-4621-8856-1b7a77b085a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{6585c9c4-832e-44ed-9c1d-1e8d76ed84ed}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\leapmotion.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\components\LeapSDK\include\Leap.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="leapmotion.def">
+      <Filter>resources</Filter>
+    </None>
+    <None Include="leapmotion64bits.def">
+      <Filter>resources</Filter>
+    </None>
+  </ItemGroup>
+</Project>

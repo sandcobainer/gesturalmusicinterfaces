@@ -1,0 +1,6 @@
+;leapmotion.def
+
+LIBRARY leapmotion.mxe
+EXPORTS
+
+	main

@@ -1,0 +1,6 @@
+;leapmotion64bits.def
+
+LIBRARY leapmotion.mxe64
+EXPORTS
+
+	main

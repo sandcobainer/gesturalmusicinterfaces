@@ -1,0 +1,65 @@
+// Xcode target configuration settings for the Max 5 SDK
+// Used as the basis for Xcode projects to build Max externals.
+//
+// Changes to the settings in this file will be applied to all SDK examples
+// To change settings for only one of the examples, override the settings using
+// Xcode's target inspector.
+//
+// by Timothy Place
+// Copyright Â© 2008, Cycling '74
+
+// ----------------------------------
+// BEGIN: NEED CHANGES
+// ----------------------------------
+
+// Leap Motion SDK
+LEAP_SDK_DIR = $(PROJECT_DIR)/../../LeapSDK
+LIBRARY_SEARCH_PATHS = $(LEAP_SDK_DIR)/lib
+
+// PATHS TO MAX FRAMEWORK/SDK
+MAX_FRAMEWORK_DIR=/Users/sandeepdasari/Documents/Max\ 7
+MAX_HEADERS_DIR = $(MAX_FRAMEWORK_DIR)/max-includes
+MSP_HEADERS_DIR = $(MAX_FRAMEWORK_DIR)/msp-includes
+JIT_HEADERS_DIR = $(MAX_FRAMEWORK_DIR)/jit-includes
+
+HEADER_SEARCH_PATHS = $(MAX_HEADERS_DIR) $(MSP_HEADERS_DIR) $(JIT_HEADERS_DIR)
+FRAMEWORK_SEARCH_PATHS = "$(MAX_FRAMEWORK_DIR)/max-includes" "$(MAX_FRAMEWORK_DIR)/msp-includes" "$(MAX_FRAMEWORK_DIR)/jit-includes"
+
+// Install Directory
+DSTROOT = $(PROJECT_DIR)/../../
+INSTALL_PATH = /
+
+// ----------------------------------
+// END: NEED CHANGES
+// ----------------------------------
+
+// Name & Version
+PRODUCT_NAME = $(PROJECT_NAME)
+PRODUCT_VERSION = 6.1.4
+
+// Architectures
+ARCHS = $(ARCHS_STANDARD_32_64_BIT)
+
+// Special Files
+GCC_PREFIX_HEADER = $(MAX_HEADERS_DIR)/macho-prefix.pch
+
+// Static Configuration (don't change these)
+WRAPPER_EXTENSION = mxo;
+WARNING_CFLAGS = -Wmost -Wno-four-char-constants -Wno-unknown-pragmas
+DEPLOYMENT_LOCATION = YES
+GENERATE_PKGINFO_FILE = YES
+
+// Linker Flags
+OTHER_LDFLAGS = -framework MaxAPI
+
+SDKROOT = macosx
+
+MACOSX_DEPLOYMENT_TARGET = 10.6
+
+C74_SYM_LINKER_FLAGS = @$(MAX_FRAMEWORK_DIR)/max-includes/c74_linker_flags.txt
+
+GCC_PREPROCESSOR_DEFINITIONS = "DENORM_WANT_FIX = 1" "NO_TRANSLATION_SUPPORT = 1" "MAX61" "USE_PTHREAD"
+
+OTHER_CFLAGS = -fvisibility=hidden
+
+OTHER_LDFLAGS = $(C74_SYM_LINKER_FLAGS)
