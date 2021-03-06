@@ -1,4 +1,6 @@
+## VIDEO DEMO
 
+[![video demo](https://img.youtube.com/vi/2Yf_n_ua53o/0.jpg)](https://youtu.be/2Yf_n_ua53o?t=196)
 
 ## Building gestural music interfaces using machine leanring.
 
